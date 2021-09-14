@@ -12,13 +12,62 @@ public class App {
         double BAC, TAC, ratio = 0;
 
         System.out.print("Enter a 1 is you are male or a 2 if you are female: ");
-        gender = user_input.nextInt();
+        do
+        {
+            try {
+                user_input = new Scanner(System.in);
+                gender = user_input.nextInt();
+            }
+            catch (Exception ex){
+                gender = -1;
+                System.out.println("Invalid input");
+            }
+        }
+        while (gender == -1);
+
         System.out.print("How many ounces of alcohol did you have? ");
-        TAC = user_input.nextDouble();
+        do
+        {
+            try {
+                user_input = new Scanner(System.in);
+                TAC = user_input.nextDouble();
+            }
+            catch (Exception ex){
+                TAC = -1;
+                System.out.println("Invalid input");
+            }
+        }
+        while (TAC == -1);
+
+
         System.out.print("What is your weight, in pounds? ");
-        weight = user_input.nextInt();
+        do
+        {
+            try {
+                user_input = new Scanner(System.in);
+                weight = user_input.nextInt();
+            }
+            catch (Exception ex){
+                weight = -1;
+                System.out.println("Invalid input");
+            }
+        }
+        while (weight == -1);
+
+
         System.out.print("How many hours has it been since your last drink? ");
-        hours = user_input.nextInt();
+        do
+        {
+            try {
+                user_input = new Scanner(System.in);
+                hours = user_input.nextInt();
+            }
+            catch (Exception ex){
+                hours = -1;
+                System.out.println("Invalid input");
+            }
+        }
+        while (hours == -1);
 
         if (gender == 1) {
             ratio = 0.73;
